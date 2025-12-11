@@ -81,6 +81,112 @@ section h3 {
   font-size: 1.4rem;
 }
 
+/* Filter Toolbar Styles */
+#filter-toolbar {
+  background: linear-gradient(145deg, #f8f9fa, #e3f2fd);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #0066cc;
+  box-shadow: 0 2px 8px rgba(0, 61, 122, 0.1);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: flex-end;
+}
+
+.filter-row:last-child {
+  margin-bottom: 0;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #003d7a;
+  font-size: 0.9rem;
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.clear-btn {
+  background: linear-gradient(135deg, #ff5722, #d32f2f);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.clear-btn:hover {
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+}
+
+.results-count {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #e3f2fd;
+  border-left: 4px solid #0066cc;
+  border-radius: 4px;
+  color: #003d7a;
+  font-weight: bold;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 1.1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 2px dashed #ddd;
+}
+
+/* Responsive adjustments for filter toolbar */
+@media (max-width: 768px) {
+  .filter-row {
+    flex-direction: column;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .clear-btn {
+    width: 100%;
+  }
+}
+
 .capability-card {
   margin-bottom: 20px;
   padding: 20px;
