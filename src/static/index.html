@@ -20,6 +20,69 @@
     <main>
       <section id="capabilities-container">
         <h3>Available Capabilities</h3>
+        
+        <!-- Search and Filter Toolbar -->
+        <div id="filter-toolbar">
+          <div class="filter-row">
+            <div class="filter-group">
+              <label for="search-input">🔍 Search:</label>
+              <input type="text" id="search-input" placeholder="Search capabilities..." />
+            </div>
+            
+            <div class="filter-group">
+              <label for="practice-filter">Practice Area:</label>
+              <select id="practice-filter">
+                <option value="">All</option>
+                <option value="Technology">Technology</option>
+                <option value="Strategy">Strategy</option>
+                <option value="Operations">Operations</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label for="industry-filter">Industry:</label>
+              <select id="industry-filter">
+                <option value="">All</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Financial Services">Financial Services</option>
+                <option value="Retail">Retail</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Technology">Technology</option>
+                <option value="Government">Government</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="filter-row">
+            <div class="filter-group">
+              <label for="availability-filter">Availability:</label>
+              <select id="availability-filter">
+                <option value="">All</option>
+                <option value="high">High (&gt;30 hrs)</option>
+                <option value="medium">Medium (20-30 hrs)</option>
+                <option value="low">Low (&lt;20 hrs)</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label for="sort-select">Sort By:</label>
+              <select id="sort-select">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="capacity-desc">Capacity (High to Low)</option>
+                <option value="capacity-asc">Capacity (Low to High)</option>
+                <option value="consultants-desc">Most Consultants</option>
+                <option value="consultants-asc">Fewest Consultants</option>
+                <option value="practice">Practice Area</option>
+              </select>
+            </div>
+            
+            <button id="clear-filters" class="clear-btn">Clear All Filters</button>
+          </div>
+        </div>
+        
+        <div id="results-count" class="results-count"></div>
+        
         <div id="capabilities-list">
           <!-- Capabilities will be loaded here -->
           <p>Loading capabilities...</p>
